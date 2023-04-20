@@ -10,7 +10,7 @@ import { FastForwardIcon, PauseIcon, PlayIcon, ReplyIcon, RewindIcon, VolumeOffI
 
 function Player() {
     const spotifyApi = useSpotify();
-    const { data: session, status } = useSession();
+    const { data: session} = useSession();
     const [currentTrackId, setCurrentIdTrack] = useRecoilState(currentTrackIdState);
     const [isPlaying, setIsPlaying] = useRecoilState(isPlayingState);
     const [volume, setVolume] = useState(50);
